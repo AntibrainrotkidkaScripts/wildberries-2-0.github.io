@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WildJokes - Магазин приколов</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+            font-family: 'Arial', sans-serif;
+        }
+
+        body {
+            background-color: #f5f5f5;
+        }
+
+        .header {
+            background: linear-gradient(135deg, #8a2be2, #4b0082);
+            padding: 15px 0;
+            box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        .logo {
+            display: flex;
+            align-items: center;
+            gap: 10px;
+            color: white;
+            font-size: 24px;
+            font-weight: bold;
+        }
+
+        .logo-icon {
+            font-size: 28px;
+        }
+
+        .banner {
+            background: linear-gradient(45deg, #ff6b6b, #ffa500);
+            color: white;
+            text-align: center;
+            padding: 30px 20px;
+            margin: 20px 0;
+            border-radius: 10px;
+        }
+
+        .banner h1 {
+            font-size: 2.5em;
+            margin-bottom: 10px;
+        }
+
+        .banner p {
+            font-size: 1.2em;
+            opacity: 0.9;
+        }
+
+        .products {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+            gap: 25px;
+            margin: 30px 0;
+        }
+
+        .product-card {
+            background: white;
+            border-radius: 15px;
+            padding: 20px;
+            box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+            transition: transform 0.3s ease;
+            text-align: center;
+        }
+
+        .product-card:hover {
+            transform: translateY(-5px);
+        }
+
+        .product-image {
+            width: 120px;
+            height: 120px;
+            background: #e0e0e0;
+            border-radius: 50%;
+            margin: 0 auto 15px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            font-size: 40px;
+        }
+
+        .product-title {
+            font-size: 1.4em;
+            font-weight: bold;
+            margin-bottom: 10px;
+            color: #333;
+        }
+
+        .price-old {
+            color: #888;
+            text-decoration: line-through;
+            font-size: 1.2em;
+            margin-bottom: 5px;
+        }
+
+        .price-new {
+            color: #27ae60;
+            font-size: 1.8em;
+            font-weight: bold;
+            margin-bottom: 15px;
+        }
+
+        .joke-text {
+            background: #fff3cd;
+            color: #856404;
+            padding: 10px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            margin-bottom: 15px;
+            border: 1px solid #ffeaa7;
+        }
+
+        .buy-btn {
+            background: linear-gradient(45deg, #8a2be2, #4b0082);
+            color: white;
+            border: none;
+            padding: 12px 30px;
+            border-radius: 25px;
+            font-size: 1.1em;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            width: 100%;
+        }
+
+        .buy-btn:hover {
+            transform: scale(1.05);
+            box-shadow: 0 5px 15px rgba(138, 43, 226, 0.3);
+        }
+
+        .footer {
+            background: #333;
+            color: white;
+            text-align: center;
+            padding: 30px 0;
+            margin-top: 50px;
+        }
+
+        .disclaimer {
+            background: #d4edda;
+            color: #155724;
+            padding: 15px;
+            border-radius: 8px;
+            margin: 20px 0;
+            border: 1px solid #c3e6cb;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <div class="container">
+            <div class="logo">
+                <span class="logo-icon">🛍️</span>
+                <span>WildJokes</span>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <div class="banner">
+            <h1>🎉 Бесплатные приколы! 🎉</h1>
+            <p>Товары, которые слишком круты, чтобы брать за них деньги</p>
+        </div>
+
+        <div class="disclaimer">
+            <strong>Внимание!</strong> Это велбериес, умри нахуй пж
+        </div>
+
+        <div class="products">
+            <div class="product-card">
+                <div class="product-image">🍵</div>
+                <div class="product-title">Волшебный Чай</div>
+                <div class="price-old">500 рублей</div>
+                <div class="price-new">0 рублей</div>
+                <div class="joke-text">Чай, который заваривается сам. Магия включена в стоимость!</div>
+                <button class="buy-btn">Забрать бесплатно</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">📦</div>
+                <div class="product-title">Што-то Там</div>
+                <div class="price-old">500 рублей</div>
+                <div class="price-new">0 рублей</div>
+                <div class="joke-text">Мы и сами не знаем что это</div>
+                <button class="buy-btn">Забрать бесплатно</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🕶️</div>
+                <div class="product-title">Очки Крутости</div>
+                <div class="price-old">500 рублей</div>
+                <div class="price-new">0 рублей</div>
+                <div class="joke-text">Надеваешь и сразу становишься самым долбоебом блять</div>
+                <button class="buy-btn">Забрать бесплатно</button>
+            </div>
+
+            <div class="product-card">
+                <div class="product-image">🚀</div>
+                <div class="product-title">Билет на Марс</div>
+                <div class="price-old">500 рублей</div>
+                <div class="price-new">0 рублей</div>
+                <div class="joke-text">В один конец. Обратный билет продается отдельно (шучу!)</div>
+                <button class="buy-btn">Забрать бесплатно</button>
+            </div>
+        </div>
+    </div>
+
+    <footer class="footer">
+        <div class="container">
+            <p>© 2024 Niggerjokes</p>
+            <p>Этот сайт создан в шутку. Но здесь можно купить наркотики.</p>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('.buy-btn').forEach(button => {
+            button.addEventListener('click', function() {
+                const productName = this.closest('.product-card').querySelector('.product-title').textContent;
+                alert(`🎊 Поздравляем! Вы получили "${productName}" абсолютно бесплатно!\n\nСпасибо, что идёте нахуй!`);
+            });
+        });
+    </script>
+</body>
+</html>
